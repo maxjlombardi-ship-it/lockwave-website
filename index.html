@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LockWave Systems - Hotel Lock Installation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <img src="images/logo.png" alt="LockWave Systems Logo" class="logo"/>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>LockWave Systems</h1>
+      <p>Modern Hotel Lock Installation – Secure, Reliable, and Easy</p>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>LockWave Systems specializes in installing state-of-the-art hotel locks using RFID, keycards, and mobile access technology. We help hotels improve guest security and convenience with modern locking solutions.</p>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Electronic keycard lock installation</li>
+      <li>Mobile phone/NFC access systems</li>
+      <li>RFID smart lock upgrades</li>
+      <li>Maintenance and technical support</li>
+    </ul>
+  </section>
+
+  <section id="feedback" class="container">
+    <h2>Customer Feedback</h2>
+    <form id="feedbackForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="message" placeholder="Your Feedback" rows="4" required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="feedbackList"></div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: info@lockwave.com</p>
+    <p>Phone: (555) 123-4567</p>
+    <p>Address: 123 Secure Ave, SafeCity</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 LockWave Systems. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const list = document.getElementById('feedbackList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      const entry = document.createElement('div');
+      entry.className = 'feedback-entry';
+      entry.innerHTML = '<strong>' + name + ':</strong> ' + message;
+      list.prepend(entry);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
